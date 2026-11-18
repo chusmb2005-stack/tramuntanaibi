@@ -133,10 +133,10 @@ button{font:inherit;color:inherit}
 .pdots:has(button:only-child){display:none}
 
 /* ---------- Pista de uso (primera visita) ---------- */
-.hint{position:fixed;left:50%;bottom:calc(1.4rem + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:20;display:grid;gap:.35rem;padding:.75rem 1.1rem;border-radius:18px;background:rgba(247,247,244,.94);border:1px solid var(--copper);font-size:.78rem;font-weight:500;white-space:nowrap;pointer-events:none;opacity:0;transition:opacity .4s}
+.hint{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);z-index:20;display:grid;gap:.5rem;padding:.9rem 1.25rem;border-radius:18px;background:rgba(247,247,244,.96);border:1px solid var(--copper);box-shadow:0 10px 30px rgba(43,29,20,.22);font-size:.88rem;font-weight:500;white-space:nowrap;pointer-events:none;opacity:0;transition:opacity .4s}
 .hint.show{opacity:1}
 .hint div{display:flex;align-items:center;gap:.55rem}
-.hint svg{width:18px;height:18px;color:var(--copper-soft);flex:none}
+.hint svg{width:20px;height:20px;color:var(--copper-soft);flex:none}
 
 /* ---------- Flechas (solo con ratón) ---------- */
 .arrow{display:none}
@@ -162,7 +162,7 @@ button{font:inherit;color:inherit}
 .pendulo{position:relative;transform-origin:50% -1.7rem;animation:balanceo 2.8s .1s both}
 .hilo{position:absolute;bottom:calc(100% + 8px);width:1.5px;height:140px;border-radius:1px;background:linear-gradient(90deg,#8d867d,#4a4038 55%,#2b1d14);box-shadow:1px 0 2px rgba(43,29,20,.25)}
 .hilo-i{left:calc(.7rem + 3px)}.hilo-d{right:calc(.7rem + 3px)}
-.panel{position:relative;padding:.2rem 1.5rem .55rem;border-radius:10px;
+.panel{position:relative;padding:.716rem 1.99rem .035rem .74rem;border-radius:10px;
   background:linear-gradient(140deg,rgba(255,255,255,.75),rgba(255,255,255,.22) 55%,rgba(43,29,20,.07));
   border:1px solid rgba(43,29,20,.22);
   box-shadow:inset 0 0 0 1px rgba(255,255,255,.8),inset 0 1px 4px rgba(255,255,255,.65),
@@ -170,7 +170,7 @@ button{font:inherit;color:inherit}
 .panel::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
   background:linear-gradient(112deg,transparent 22%,rgba(255,255,255,.5) 30%,rgba(255,255,255,.08) 38%,transparent 44%)}
 /* Tubo de neón: núcleo claro, borde ámbar, halo y sombra sobre el panel */
-.bar .brand{position:relative;margin:0;font-family:var(--script);font-size:2.5rem;line-height:1;text-align:center;
+.bar .brand{position:relative;margin:0;font-family:var(--script);font-size:2.15rem;line-height:1;text-align:center;
   color:#ffe39a;-webkit-text-stroke:.022em #f39a12;paint-order:stroke fill;
   text-shadow:0 0 2px rgba(255,214,120,.9),0 0 6px rgba(255,176,46,.75),0 0 12px rgba(255,176,46,.28),2px 5px 4px rgba(43,29,20,.32);
   animation:parpadeo 2.1s 1.1s both}
@@ -524,9 +524,14 @@ function bootCarta(){
   setActive(start);
   requestAnimationFrame(function(){go(start,true)});
 
-  /* ---------- Pista de uso (solo la primera vez en esta visita) ---------- */
+  /* ---------- Cómo usar la carta ----------
+     Se explica a quien aún no ha aceptado las cookies (primera visita, o las rechazó),
+     una vez por visita. Quien ya las aceptó conoce la carta y no la ve. */
+  function aceptoCookies(){
+    try{var v=JSON.parse(localStorage.getItem('tramuntana-consent'));return !!(v&&v.date&&Date.now()-v.date<365*864e5&&v.analytics===true)}catch(e){return false}
+  }
   var seen=false;try{seen=sessionStorage.getItem('tr-tiktok-hint')==='1'}catch(e){}
-  if(!seen){
+  if(!seen&&!aceptoCookies()){
     var hint=document.getElementById('hint');
     setTimeout(function(){
       hint.classList.add('show');
@@ -537,8 +542,9 @@ function bootCarta(){
       }
     },800);
     var hide=function(){hint.classList.remove('show');try{sessionStorage.setItem('tr-tiktok-hint','1')}catch(e){}};
-    setTimeout(hide,4800);
-    deck.addEventListener('touchstart',function(){setTimeout(hide,600)},{once:true,passive:true});
+    setTimeout(hide,9000);
+    /* desaparece en cuanto el visitante toca, desliza o pulsa una tecla */
+    ['pointerdown','keydown','wheel'].forEach(function(ev){document.addEventListener(ev,function(){setTimeout(hide,250)},{once:true,passive:true})});
   }
 }
 </script>
