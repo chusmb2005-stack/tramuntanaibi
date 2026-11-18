@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232B1D14'/%3E%3Ctext x='32' y='46' font-size='40' text-anchor='middle' fill='%23F5C451' font-family='Georgia,serif' font-weight='700'%3ET%3C/text%3E%3C/svg%3E">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Nuestra Carta · Café Tramuntana</title>
 <meta name="description" content="Carta de Café Tramuntana en Ibi: desliza entre cafés, tapas, bocadillos, cervezas y copas.">
@@ -413,8 +414,7 @@ function bootCarta(){
       if(gi===0){
         var hero=el('div','hero');
         var img=el('img');img.alt='';img.decoding='async';img.loading=ci<2?'eager':'lazy';
-        img.src='img/cat-'+c.id+'.jpg';
-        (function(img,c){img.onerror=function(){trImg(img,'cat-'+c.id,c.photo)}})(img,c);
+        if(c.photo){img.src=c.photo;img.onerror=function(){img.remove()}}
         hero.appendChild(img);
         var ht=el('div','hero-title');if(c.when)ht.appendChild(el('span','when',c.when));ht.appendChild(el('h2',null,c.title));
         hero.appendChild(ht);page.appendChild(hero);

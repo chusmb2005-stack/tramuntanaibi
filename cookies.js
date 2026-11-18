@@ -75,6 +75,7 @@ var GA_ID = 'G-XXXXXXXXXX';
     '.ck .ck-no{background:#F5C451;color:#2B1D14}' +
     '.ck button:hover{box-shadow:0 0 18px rgba(255,176,46,.55)}' +
     '.ck button:focus-visible{outline:2px solid #F5C451;outline-offset:3px}' +
+    '@media (max-width:520px){.ck{padding:.85rem .95rem;font-size:.8rem;line-height:1.45;width:calc(100% - 1.2rem);bottom:max(.6rem,env(safe-area-inset-bottom))}.ck h2{font-size:1.2rem;margin-bottom:.2rem}.ck p{margin-bottom:.65rem}.ck button{padding:.6rem .8rem}}' +
     '@media (prefers-reduced-motion:reduce){.ck{transition:none}}';
 
   var banner;
