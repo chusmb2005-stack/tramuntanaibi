@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Información legal · Café Tramuntana</title>
+<meta name="description" content="Aviso legal, política de privacidad y política de cookies de Café Tramuntana, Ibi.">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#F7F7F4">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&family=Sacramento&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#F7F7F4; --espresso:#FFFFFF; --roast:#DCD9D1; --nogal:#2B1D14;
+  --copper:#F5C451; --copper-soft:#8B5A2B;
+  --cream:#2B1D14; --foam:#5E4E42;
+  --radius:18px;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Instrument Sans',system-ui,sans-serif;
+  --script:'Sacramento','Brush Script MT',cursive;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--cream);font-family:var(--sans);line-height:1.7;font-size:1rem;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--copper-soft)}
+button{font:inherit}
+:focus-visible{outline:2px solid #8B5A2B;outline-offset:3px}
+.wrap{width:min(720px,100% - 2.5rem);margin-inline:auto}
+
+/* ---------- Cabecera ---------- */
+.top{position:relative;text-align:center;padding:1.2rem 1.25rem 2.2rem;background:var(--ink)}
+.back{position:absolute;top:max(1rem,env(safe-area-inset-top));left:1rem;display:inline-flex;align-items:center;gap:.4rem;text-decoration:none;color:var(--foam);font-size:.88rem;font-weight:500;padding:.45rem .8rem .45rem .55rem;border-radius:99px;border:1px solid transparent;transition:color .25s,border-color .25s}
+.back:hover{color:var(--cream);border-color:var(--roast)}
+.back svg{width:20px;height:20px}
+.brand{font-family:var(--script);color:var(--copper);font-size:2.2rem;line-height:1;margin-top:3rem}
+.top h1{font-family:var(--serif);font-weight:700;font-size:clamp(2rem,8vw,3rem);line-height:1.1;margin-top:.8rem}
+.top p{color:var(--foam);margin:.5rem auto 0;font-size:.9rem}
+
+/* ---------- Navegación ---------- */
+.nav{position:sticky;top:0;z-index:40;background:rgba(247,247,244,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--roast);padding-top:env(safe-area-inset-top)}
+.nav-scroll{display:flex;gap:.55rem;overflow-x:auto;padding:.8rem 1.25rem;scrollbar-width:none}
+.nav-scroll::-webkit-scrollbar{display:none}
+.chip{flex:none;white-space:nowrap;text-decoration:none;color:var(--foam);background:var(--espresso);border:1px solid var(--roast);padding:.6rem 1.15rem;border-radius:99px;font-weight:600;font-size:.88rem;transition:background .25s,color .25s,border-color .25s}
+.chip:hover{color:var(--cream);border-color:var(--copper-soft)}
+.chip[aria-current="true"]{background:var(--copper);border-color:var(--copper);color:var(--nogal)}
+@media (min-width:720px){.nav-scroll{justify-content:center}}
+
+/* ---------- Contenido ---------- */
+main{padding:1.5rem 0 7rem}
+.doc{padding:2.5rem 0 1rem;scroll-margin-top:4.5rem;border-bottom:1px solid var(--roast)}
+.doc:last-of-type{border-bottom:0}
+.doc h2{font-family:var(--serif);font-weight:700;font-size:clamp(1.8rem,6.5vw,2.5rem);line-height:1.15;margin-bottom:1rem}
+.doc h3{font-family:var(--serif);font-weight:700;font-size:1.2rem;color:var(--cream);margin:1.8rem 0 .5rem}
+.doc p,.doc li{color:var(--foam);font-size:.95rem}
+.doc p{margin-bottom:.9rem;max-width:65ch}
+.doc ul{padding-left:1.2rem;margin-bottom:.9rem}
+.doc li{margin-bottom:.35rem}
+.doc strong{color:var(--cream);font-weight:600}
+
+.card{background:var(--espresso);border:1px solid var(--roast);border-radius:var(--radius);padding:1.1rem 1.25rem;margin:1rem 0 1.4rem}
+.card dl{display:grid;grid-template-columns:1fr;gap:.15rem .9rem}
+.card dt{color:var(--foam);font-size:.8rem}
+.card dd{color:var(--cream);font-weight:500;margin-bottom:.55rem;overflow-wrap:anywhere}
+@media (min-width:560px){.card dl{grid-template-columns:9rem 1fr}.card dd{margin-bottom:.2rem}}
+
+/* Tabla de cookies: en móvil se apila como tarjetas */
+.ck-table{width:100%;border-collapse:collapse;margin:1rem 0 1.4rem;font-size:.88rem}
+.ck-table th{text-align:left;font-weight:600;color:var(--cream);padding:.7rem .6rem;border-bottom:1px solid var(--copper)}
+.ck-table td{color:var(--foam);padding:.7rem .6rem;border-bottom:1px solid var(--roast);vertical-align:top}
+.ck-table td:first-child{color:var(--cream);font-weight:600;white-space:nowrap}
+@media (max-width:640px){
+  .ck-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .ck-table,.ck-table tbody,.ck-table tr,.ck-table td{display:block;width:100%}
+  .ck-table tr{background:var(--espresso);border:1px solid var(--roast);border-radius:14px;padding:.6rem .9rem;margin-bottom:.7rem}
+  .ck-table td{border:0;padding:.25rem 0;display:grid;grid-template-columns:6.5rem 1fr;gap:.6rem}
+  .ck-table td::before{content:attr(data-label);color:var(--foam);font-weight:400;font-size:.78rem}
+  .ck-table td:first-child{white-space:normal}
+}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.85rem 1.5rem;border-radius:99px;font-weight:600;font-size:.92rem;text-decoration:none;cursor:pointer;border:1px solid var(--copper);background:var(--copper);color:var(--nogal);transition:background .25s,transform .25s}
+.btn:hover{background:#FFD978;transform:translateY(-2px)}
+
+/* ---------- Pie ---------- */
+footer{padding:2.5rem 0 7rem;text-align:center;border-top:1px solid var(--roast);color:var(--foam);font-size:.85rem}
+footer a{color:var(--cream)}
+
+/* ---------- FAB ---------- */
+.fab{position:fixed;right:max(1.1rem,env(safe-area-inset-right));bottom:max(1.1rem,env(safe-area-inset-bottom));z-index:50;display:inline-flex;align-items:center;justify-content:center;width:3.6rem;height:3.6rem;border-radius:50%;background:var(--copper);color:var(--nogal);text-decoration:none;box-shadow:0 10px 30px rgba(43,29,20,.16),0 0 0 4px rgba(247,247,244,.6);transition:transform .25s,background .25s}
+.fab:hover{background:#FFD978;transform:translateY(-3px)}
+.fab svg{width:26px;height:26px}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+/* ---------- Ajustes para móvil: letra algo más pequeña y más contraste ---------- */
+@media (max-width:600px){
+  body{font-size:.94rem}
+  .wrap{width:calc(100% - 2rem)}
+  .top h1{font-size:1.85rem}
+  .brand{font-size:1.9rem}
+  .chip{font-size:.8rem;padding:.5rem .95rem}
+  .doc{padding:2rem 0 .8rem}
+  .doc h2{font-size:1.6rem}
+  .doc h3{font-size:1.08rem;margin-top:1.5rem}
+  .doc p,.doc li{font-size:.88rem;color:#5E4E42;line-height:1.6}
+  .fab{width:3.2rem;height:3.2rem}
+}
+
+/* Nombre del local como el neón de la pared */
+.brand,.neon{font-family:var(--script);font-weight:400;color:#E9A92C;text-shadow:0 0 1px #fff7da,0 0 6px rgba(255,176,46,.9),0 0 18px rgba(255,176,46,.55),0 0 36px rgba(255,176,46,.35)}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <a class="back" href="index.html" aria-label="Volver al inicio">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+    Volver
+  </a>
+  <div class="brand">Café Tramuntana</div>
+  <h1>Información legal</h1>
+  <p>Última actualización: 2 de octubre de 2026</p>
+</header>
+
+<nav class="nav" aria-label="Secciones legales">
+  <div class="nav-scroll">
+    <a class="chip" href="#aviso" data-target="aviso">Aviso legal</a>
+    <a class="chip" href="#privacidad" data-target="privacidad">Privacidad</a>
+    <a class="chip" href="#cookies" data-target="cookies">Cookies</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <!-- ================= AVISO LEGAL ================= -->
+  <section class="doc" id="aviso" aria-labelledby="h-aviso">
+    <h2 id="h-aviso">Aviso legal y condiciones de uso</h2>
+    <p>En cumplimiento de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), te informamos de los datos del titular de este sitio web.</p>
+
+    <div class="card">
+      <dl>
+        <dt>Titular</dt><dd>Victor Manuel Monllor</dd>
+        <dt>Nombre comercial</dt><dd>Café Tramuntana</dd>
+        <dt>Domicilio</dt><dd>Av. de la Pau, 34, 03440 Ibi (Alicante)</dd>
+        <dt>Actividad</dt><dd>Bar y cafetería</dd>
+      </dl>
+    </div>
+
+    <h3>Objeto</h3>
+    <p>Esta web tiene una finalidad informativa: dar a conocer Café Tramuntana, su carta, su horario y su ubicación. A través de ella no se venden productos ni se realizan reservas o pagos.</p>
+
+    <h3>Condiciones de uso</h3>
+    <p>Al navegar por esta web aceptas utilizarla de forma lícita y respetuosa, sin dañar su funcionamiento ni el de los equipos de otras personas. Podemos modificar sus contenidos y estas condiciones en cualquier momento; la versión vigente es siempre la publicada aquí.</p>
+
+    <h3>Carta, precios y horario</h3>
+    <p>La carta, los precios y el horario que aparecen en la web son orientativos y pueden cambiar sin previo aviso. Los precios válidos son los que se indican en el local en el momento del consumo. Si tienes alguna alergia o intolerancia, consulta siempre a nuestro equipo antes de pedir.</p>
+
+    <h3>Propiedad intelectual</h3>
+    <p>El nombre, el logotipo y los textos de Café Tramuntana pertenecen a su titular o se usan con permiso. No está permitido reproducirlos con fines comerciales sin autorización. Algunas fotografías proceden de bancos de imágenes y pertenecen a sus autores.</p>
+
+    <h3>Enlaces a otras webs</h3>
+    <p>La web enlaza con servicios de terceros, como Instagram, Facebook o Google Maps. No somos responsables de sus contenidos ni de sus políticas, que te recomendamos consultar.</p>
+
+    <h3>Responsabilidad</h3>
+    <p>Trabajamos para que la información sea correcta y esté actualizada, pero no podemos garantizar la ausencia de errores ni que la web esté disponible en todo momento.</p>
+
+    <h3>Legislación aplicable</h3>
+    <p>Estas condiciones se rigen por la legislación española. Cualquier controversia se someterá a los juzgados y tribunales que correspondan según la normativa aplicable.</p>
+  </section>
+
+  <!-- ================= PRIVACIDAD ================= -->
+  <section class="doc" id="privacidad" aria-labelledby="h-priv">
+    <h2 id="h-priv">Política de privacidad</h2>
+    <p>Te explicamos qué datos personales tratamos, para qué y cuáles son tus derechos, conforme al Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD).</p>
+
+    <h3>Responsable del tratamiento</h3>
+    <div class="card">
+      <dl>
+        <dt>Responsable</dt><dd>Victor Manuel Monllor</dd>
+        <dt>Domicilio</dt><dd>Av. de la Pau, 34, 03440 Ibi (Alicante)</dd>
+      </dl>
+    </div>
+
+    <h3>Qué datos tratamos y para qué</h3>
+    <ul>
+      <li><strong>Datos de navegación (Google Analytics):</strong> solo si aceptas las cookies analíticas. Recogemos información sobre cómo usas la web (páginas vistas, tipo de dispositivo, ciudad aproximada) para saber cuántas personas nos visitan y mejorar la página. No sirve para identificarte personalmente. Base legal: tu consentimiento.</li>
+      <li><strong>Mensajes que nos envías:</strong> si nos escribes por Instagram o por Facebook, usaremos tu nombre, tu contacto y lo que nos cuentes solo para responderte. Base legal: tu consentimiento al contactarnos.</li>
+      <li><strong>Reseñas de Google:</strong> al llegar a la sección de reseñas de la portada, la web pide a Google las opiniones publicadas en nuestra ficha y Google recibe tu dirección IP. Base legal: nuestro interés legítimo en mostrar la opinión de nuestros clientes.</li>
+      <li><strong>Mapa:</strong> el mapa de la sección «Cuándo abrimos» se carga desde Google Maps cuando te acercas a esa parte de la página, y Google recibe tu dirección IP. Base legal: interés legítimo en mostrarte cómo llegar al local.</li>
+    </ul>
+    <p>Esta web no tiene formularios ni registro de usuarios, y no usamos tus datos para enviarte publicidad.</p>
+
+    <h3>Cuánto tiempo los conservamos</h3>
+    <p>Los mensajes se conservan el tiempo necesario para atender tu consulta. Los datos de Google Analytics se conservan como máximo 14 meses, tras lo cual Google los elimina automáticamente.</p>
+
+    <h3>Con quién los compartimos</h3>
+    <p>No cedemos tus datos a nadie salvo obligación legal. Usamos servicios de <strong>Google Ireland Ltd.</strong> (Analytics, Maps, reseñas y Fonts). Google puede tratar datos en Estados Unidos; Google LLC está adherida al Marco de Privacidad de Datos UE-EE. UU., que garantiza un nivel de protección adecuado.</p>
+
+    <h3>Tus derechos</h3>
+    <p>Puedes pedir en cualquier momento acceder a tus datos, rectificarlos o suprimirlos, oponerte a su tratamiento, limitarlo, solicitar su portabilidad y retirar tu consentimiento. Escríbenos por Instagram o Facebook, o pídelo en el propio local (Av. de la Pau, 34, Ibi), indicando qué derecho quieres ejercer.</p>
+    <p>Si crees que no hemos atendido bien tu solicitud, puedes presentar una reclamación ante la Agencia Española de Protección de Datos en <a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a>.</p>
+
+    <h3>Menores</h3>
+    <p>Esta web no está dirigida a menores de 14 años y no recogemos conscientemente sus datos.</p>
+  </section>
+
+  <!-- ================= COOKIES ================= -->
+  <section class="doc" id="cookies" aria-labelledby="h-cookies">
+    <h2 id="h-cookies">Política de cookies</h2>
+    <p>Las cookies son pequeños archivos que una web guarda en tu navegador para recordar información sobre tu visita. Aquí te contamos cuáles usamos.</p>
+
+    <h3>Cookies que utilizamos</h3>
+    <table class="ck-table">
+      <thead><tr><th>Nombre</th><th>Titular</th><th>Finalidad</th><th>Duración</th></tr></thead>
+      <tbody>
+        <tr>
+          <td data-label="Nombre">tramuntana-consent</td>
+          <td data-label="Titular">Propia</td>
+          <td data-label="Finalidad">Técnica. Recuerda si has aceptado o rechazado las cookies. Se guarda en el almacenamiento local del navegador.</td>
+          <td data-label="Duración">1 año</td>
+        </tr>
+        <tr>
+          <td data-label="Nombre">_ga</td>
+          <td data-label="Titular">Google Analytics</td>
+          <td data-label="Finalidad">Analítica. Distingue visitantes de forma anónima para contar visitas. Solo si la aceptas.</td>
+          <td data-label="Duración">2 años</td>
+        </tr>
+        <tr>
+          <td data-label="Nombre">_ga_*</td>
+          <td data-label="Titular">Google Analytics</td>
+          <td data-label="Finalidad">Analítica. Mantiene el estado de la sesión. Solo si la aceptas.</td>
+          <td data-label="Duración">2 años</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Servicios de terceros</h3>
+    <ul>
+      <li><strong>Google Maps:</strong> el mapa se carga cuando llegas a la sección «Cuándo abrimos». A partir de ese momento Google puede instalar sus propias cookies. Puedes consultar su <a href="https://policies.google.com/technologies/cookies?hl=es" target="_blank" rel="noopener">política de cookies</a>.</li>
+      <li><strong>Reseñas de Google:</strong> las reseñas de la portada se cargan desde Google Maps Platform cuando llegas a esa sección. Google recibe tu dirección IP para enviarlas. Los nombres y fotos de quienes escriben las reseñas pertenecen a sus autores y a Google.</li>
+      <li><strong>Google Fonts:</strong> las tipografías de la web se cargan desde servidores de Google. No instala cookies, pero Google recibe tu dirección IP para enviarte las fuentes.</li>
+      <li><strong>Instagram y Facebook:</strong> solo enlazamos a nuestros perfiles. No cargan nada en esta web hasta que pulsas el enlace.</li>
+    </ul>
+
+    <h3>Cómo cambiar tu elección</h3>
+    <p>Puedes aceptar o rechazar las cookies analíticas en cualquier momento. Si las rechazas después de haberlas aceptado, las borramos de tu navegador.</p>
+    <p><button class="btn" type="button" data-cookie-settings>Configurar cookies</button></p>
+    <p>También puedes bloquear o eliminar cookies desde la configuración de tu navegador: <a href="https://support.google.com/chrome/answer/95647?hl=es" target="_blank" rel="noopener">Chrome</a>, <a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank" rel="noopener">Safari</a>, <a href="https://support.mozilla.org/es/kb/Borrar%20cookies" target="_blank" rel="noopener">Firefox</a> o <a href="https://support.microsoft.com/es-es/microsoft-edge" target="_blank" rel="noopener">Edge</a>.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© <span id="year">2026</span> Café Tramuntana · Av. de la Pau, 34, Ibi · <a href="https://www.instagram.com/tramuntanaibi" target="_blank" rel="noopener">@tramuntanaibi</a> · <a href="https://www.facebook.com/p/Caf%C3%A9Tramuntana-100092449556893/" target="_blank" rel="noopener">Facebook</a></p>
+  </div>
+</footer>
+
+<a class="fab" href="index.html" aria-label="Volver a la página de inicio">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9.5a.5.5 0 0 0 .5.5h4v-5.5h4V20h4a.5.5 0 0 0 .5-.5V10"/></svg>
+</a>
+
+<script>
+(function(){
+  document.getElementById('year').textContent=new Date().getFullYear();
+  /* Resalta en la barra la sección que estás leyendo */
+  var chips=document.querySelectorAll('.chip');
+  function mark(id){chips.forEach(function(c){c.setAttribute('aria-current',c.dataset.target===id)})}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting)mark(e.target.id)});
+    },{rootMargin:'-30% 0px -60% 0px'});
+    document.querySelectorAll('.doc').forEach(function(s){io.observe(s)});
+  }
+  mark(location.hash.replace('#','')||'aviso');
+})();
+</script>
+<script src="cookies.js" defer></script>
+</body>
+</html>

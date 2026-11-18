@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Café Tramuntana · Cafés, cervezas y tapas en Ibi</title>
+<meta name="description" content="Café Tramuntana, cafetería y bar en Av. de la Pau 34, Ibi. Cafés y desayunos por la mañana, cervezas, copas y cócteles por la noche.">
+<meta name="theme-color" content="#F7F7F4">
+<!-- Vista previa al compartir el enlace (WhatsApp, Instagram, Facebook…) -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Café Tramuntana">
+<meta property="og:title" content="Café Tramuntana · Cafés, cervezas y tapas en Ibi">
+<meta property="og:description" content="Cafetería y cervecería en Av. de la Pau 34, Ibi. Cafés y desayunos por la mañana; cervezas, copas y tapas por la noche.">
+<meta property="og:url" content="https://chusmb2005-stack.github.io/tramuntanaibi/">
+<meta property="og:image" content="https://chusmb2005-stack.github.io/tramuntanaibi/fondo.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<!-- Ficha del negocio para Google (horario, dirección y redes) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Café Tramuntana",
+  "description": "Cafetería y cervecería en Ibi: cafés, desayunos, tapas y bocadillos; cervezas, copas y cócteles.",
+  "url": "https://chusmb2005-stack.github.io/tramuntanaibi/",
+  "image": "https://chusmb2005-stack.github.io/tramuntanaibi/fondo.jpg",
+  "servesCuisine": ["Desayunos", "Tapas", "Bocadillos"],
+  "priceRange": "€",
+  "menu": "https://chusmb2005-stack.github.io/tramuntanaibi/carta.html",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. de la Pau, 34",
+    "postalCode": "03440",
+    "addressLocality": "Ibi",
+    "addressRegion": "Alicante",
+    "addressCountry": "ES"
+  },
+  "hasMap": "https://www.google.com/maps/place/?q=place_id:ChIJfYmv5-gqYg0RJ-qEwsOOt_Q",
+  "sameAs": [
+    "https://www.instagram.com/tramuntanaibi",
+    "https://www.facebook.com/p/Caf%C3%A9Tramuntana-100092449556893/"
+  ],
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday"], "opens": "08:30", "closes": "14:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday"], "opens": "16:30", "closes": "22:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "08:30", "closes": "14:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "16:30", "closes": "22:30"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "08:30", "closes": "14:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "16:30", "closes": "23:59"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "14:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "17:00", "closes": "23:59"}
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&family=Sacramento&display=swap" rel="stylesheet">
+<style>
+/* =====================================================================
+   Café Tramuntana · el local en la pantalla
+   cal (pared encalada) · nogal (madera) · neón · helecho · baldosa
+   ===================================================================== */
+:root{
+  --cal:#F7F7F4; --cal-2:#EEEDE8; --linea:#DCD9D1;
+  --nogal:#2B1D14; --nogal-2:#5E4E42; --madera:#8B5A2B;
+  --neon:#F5C451; --neon-core:#E9A92C; --glow:255,176,46;
+  --helecho:#4D6B3A; --baldosa:#8C8F90;
+  --noche:#1F1610; --noche-2:#2E2219; --noche-txt:#F3EBDD; --noche-muted:#C9B9A4;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Instrument Sans',system-ui,sans-serif;
+  --script:'Sacramento','Brush Script MT',cursive;
+  --r:6px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cal);color:var(--nogal);font-family:var(--sans);font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--madera);outline-offset:3px}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+section{padding:5.5rem 0}
+h2{font-family:var(--serif);font-weight:600;font-size:clamp(2.1rem,5.5vw,3rem);line-height:1.08;letter-spacing:-.005em;margin-bottom:1rem;text-wrap:balance}
+h3{font-family:var(--serif);font-weight:700;font-size:1.5rem;line-height:1.2}
+p{color:var(--nogal-2);max-width:58ch}
+
+.estado{display:flex;flex-wrap:wrap;align-items:center;gap:.7rem .9rem;margin-bottom:1.8rem}
+.estado .status{margin:0}
+.aviso{display:flex;gap:.7rem;align-items:flex-start;max-width:34rem;padding:.7rem 1rem;border-radius:var(--r);border-left:4px solid var(--neon-core);
+  background:rgba(var(--glow),.16);font-size:.95rem;font-weight:500;color:var(--nogal)}
+.aviso::before{content:"!";flex:none;display:grid;place-items:center;width:1.35rem;height:1.35rem;margin-top:.05rem;border-radius:50%;background:var(--neon-core);color:var(--nogal);font-weight:700;font-size:.85rem;line-height:1}
+.aviso[hidden]{display:none}
+.aviso p{color:inherit;max-width:none;margin:0}
+.aviso p+p{margin-top:.3rem}
+.aviso-visita{margin:1.4rem 0 0}
+/* ---------- Botones ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.85rem 1.4rem;border-radius:var(--r);font:inherit;font-weight:600;font-size:.97rem;text-decoration:none;border:1.5px solid var(--nogal);cursor:pointer;transition:background .2s,color .2s,box-shadow .2s}
+.btn-neon{background:var(--neon);border-color:var(--neon);color:var(--nogal)}
+.btn-neon:hover{box-shadow:0 0 0 4px rgba(var(--glow),.25),0 0 24px rgba(var(--glow),.55)}
+.btn-line{background:transparent;color:var(--nogal)}
+.btn-line:hover{background:var(--nogal);color:var(--cal)}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* ---------- Neón: el cartel del local ---------- */
+.neon{font-family:var(--script);font-weight:400;line-height:.9;color:var(--neon-core);
+  text-shadow:0 0 1px #fff7da,0 0 6px rgba(var(--glow),.9),0 0 18px rgba(var(--glow),.65),0 0 42px rgba(var(--glow),.45)}
+/* ---------- El letrero colgado: panel de metacrilato con neón, sujeto por dos hilos ---------- */
+.colgante{position:relative;display:inline-block;max-width:100%;margin:0 0 1.6rem;animation:caer 1.5s .2s both}
+.hilo{position:absolute;bottom:calc(100% + 13px);width:2px;height:200vh;border-radius:1px;
+  background:linear-gradient(90deg,#8d867d,#4a4038 55%,#2b1d14);box-shadow:2px 0 3px rgba(43,29,20,.25)}
+.hilo-i{left:calc(1.15rem + 5px)}
+.hilo-d{right:calc(1.15rem + 5px)}
+.pendulo{position:relative;transform-origin:50% calc(var(--techo,90px)*-1);animation:balanceo 3.2s .2s both}
+.panel{position:relative;
+  padding:2.5rem 2.1rem 0 1.72rem;border-radius:14px;
+  background:linear-gradient(140deg,rgba(255,255,255,.72),rgba(255,255,255,.2) 55%,rgba(43,29,20,.07));
+  border:1px solid rgba(43,29,20,.22);
+  /* grosor del metacrilato (canto) + sombra de contacto + sombra proyectada sobre la pared */
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.8),inset 0 2px 7px rgba(255,255,255,.65),inset 0 -3px 6px rgba(43,29,20,.1),
+             0 3px 0 #cdc8be,0 4px 1px rgba(43,29,20,.32),0 10px 14px -4px rgba(43,29,20,.32),
+             20px 34px 44px -14px rgba(43,29,20,.38)}
+/* Reflejo en diagonal sobre el metacrilato */
+.panel::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:linear-gradient(112deg,transparent 22%,rgba(255,255,255,.5) 30%,rgba(255,255,255,.08) 38%,transparent 44%,transparent 62%,rgba(255,255,255,.28) 66%,transparent 72%)}
+/* La luz del neón tiñe el panel y la pared de alrededor */
+.panel::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:radial-gradient(ellipse at 50% 58%,rgba(255,186,64,.07),rgba(255,186,64,0) 75%);animation:luz 2.1s 1.55s both}
+.colgante::after{content:"";position:absolute;inset:-70px -60px -90px;z-index:-1;pointer-events:none;border-radius:50%;
+  background:radial-gradient(ellipse at 50% 55%,rgba(255,176,46,.14),rgba(255,176,46,0) 65%);animation:luz 2.1s 1.55s both}
+.panel .neon{margin:0;position:relative}
+/* Pinzas de tender de madera: agarran el borde del panel y el hilo pasa por su cabeza */
+.madera{position:absolute;top:-25px;z-index:4;width:16px;height:46px;overflow:visible;pointer-events:none;
+  filter:drop-shadow(2px 5px 3px rgba(43,29,20,.5)) drop-shadow(0 1px 0 rgba(43,29,20,.3))}
+.madera.mi{left:calc(1.15rem - 2px)}
+.madera.md{right:calc(1.15rem - 2px)}
+
+/* El tubo de neón queda separado del panel y proyecta su sombra sobre él */
+.neon.flicker{color:#ffe39a;-webkit-text-stroke:.03em #f39a12;paint-order:stroke fill;
+  text-shadow:0 0 2px rgba(255,214,120,.9),0 0 7px rgba(var(--glow),.75),0 0 15px rgba(var(--glow),.28),4px 9px 7px rgba(43,29,20,.34);
+  animation:parpadeo 2.1s 1.55s both}
+/* Cae del techo con sus hilos y rebota un poco */
+@keyframes caer{
+  0%{transform:translateY(-115vh);animation-timing-function:cubic-bezier(.5,0,.9,.6)}
+  52%{transform:translateY(0);animation-timing-function:ease-out}
+  66%{transform:translateY(-3.5vh);animation-timing-function:ease-in}
+  78%{transform:translateY(0);animation-timing-function:ease-out}
+  88%{transform:translateY(-.8vh);animation-timing-function:ease-in-out}
+  100%{transform:translateY(0)}
+}
+/* Cuelga de los hilos y se balancea hasta pararse */
+@keyframes balanceo{
+  0%{transform:rotate(-4deg)}20%{transform:rotate(3deg)}40%{transform:rotate(-2.4deg)}
+  55%{transform:rotate(1.8deg)}70%{transform:rotate(-1.1deg)}83%{transform:rotate(.6deg)}
+  93%{transform:rotate(-.2deg)}100%{transform:rotate(0)}
+}
+/* Cae apagado (cristal pálido); al llegar, el neón parpadea hasta quedarse encendido */
+@keyframes parpadeo{
+  0%,7%,14%,21%,29%,36%{color:#e9e4d6;-webkit-text-stroke-color:#bdb5a2;text-shadow:3px 8px 6px rgba(43,29,20,.3)}
+  9%,12%{color:#ffeab0;-webkit-text-stroke-color:#d49a3a;text-shadow:0 0 5px rgba(var(--glow),.7),3px 8px 6px rgba(43,29,20,.3)}
+  23%,27%{color:#ffe7a8;-webkit-text-stroke-color:#e89a22;text-shadow:0 0 3px rgba(255,214,120,.75),0 0 9px rgba(var(--glow),.4),4px 9px 7px rgba(43,29,20,.32)}
+  64%,67%{color:#ffe7a8;-webkit-text-stroke-color:#e89a22;text-shadow:0 0 2px rgba(255,214,120,.65),0 0 6px rgba(var(--glow),.35),4px 9px 7px rgba(43,29,20,.32)}
+  38%,60%,70%,100%{color:#ffe39a;-webkit-text-stroke-color:#f39a12;text-shadow:0 0 2px rgba(255,214,120,.9),0 0 7px rgba(var(--glow),.75),0 0 15px rgba(var(--glow),.28),4px 9px 7px rgba(43,29,20,.34)}
+}
+/* Luz que el neón proyecta sobre el panel y la pared, al ritmo del parpadeo */
+@keyframes luz{
+  0%,7%,14%,21%,29%,36%{opacity:0}9%,12%{opacity:.45}23%,27%{opacity:.7}64%,67%{opacity:.6}38%,60%,70%,100%{opacity:1}
+}
+
+/* ---------- Portada ---------- */
+.hero{padding:2.5rem 0 4rem;overflow:clip}
+.hero-grid{display:grid;gap:2.5rem;align-items:center}
+.hero h1{font-size:clamp(4.2rem,17vw,8.2rem);margin:0}
+.lede{font-size:1.15rem;color:var(--nogal);max-width:34ch;margin-bottom:1.6rem}
+.status{display:inline-flex;align-items:center;gap:.65rem;font-size:.95rem;font-weight:500;color:var(--nogal-2);margin-bottom:1.8rem;padding:.5rem 1.1rem .5rem .9rem;border:1.5px solid var(--linea);border-radius:99px}
+.dot{width:.6rem;height:.6rem;border-radius:50%;background:var(--baldosa);flex:none}
+/* Cuando está abierto, el cartel se enciende como el neón del local */
+.status.open{color:var(--nogal);border-color:var(--neon-core);box-shadow:0 0 0 1px rgba(var(--glow),.3),0 0 16px rgba(var(--glow),.45),inset 0 0 12px rgba(var(--glow),.18);animation:cartel 1.2s 3.2s both}
+.status.open .dot{background:var(--neon-core);box-shadow:0 0 8px 2px rgba(var(--glow),.8)}
+@keyframes cartel{0%,20%{border-color:var(--linea);box-shadow:none}30%{border-color:var(--neon-core);box-shadow:0 0 12px rgba(var(--glow),.5)}38%{border-color:var(--linea);box-shadow:none}55%,100%{border-color:var(--neon-core);box-shadow:0 0 0 1px rgba(var(--glow),.3),0 0 16px rgba(var(--glow),.45),inset 0 0 12px rgba(var(--glow),.18)}}
+.actions{display:flex;flex-wrap:wrap;gap:.75rem}
+.hero-photo{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:16/10;background:var(--cal-2)}
+.hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* ---------- Día y noche ---------- */
+.moment{background:var(--cal-2);transition:background-color .7s ease,color .7s ease}
+.moment-grid{display:grid;gap:2.5rem;align-items:center}
+.moments{display:inline-flex;gap:.25rem;padding:.25rem;border:1.5px solid var(--linea);border-radius:calc(var(--r) + 4px);margin:.6rem 0 1.6rem;transition:border-color .7s}
+.moments button{font:inherit;font-weight:600;font-size:.95rem;color:var(--nogal-2);background:none;border:0;padding:.6rem 1.15rem;border-radius:var(--r);cursor:pointer;transition:background .3s,color .3s}
+.moments button[aria-selected="true"]{background:var(--nogal);color:var(--cal)}
+.moment-text{min-height:12rem}
+.moment-text h3{margin-bottom:.5rem;font-size:1.7rem}
+.moment-text [hidden]{display:none}
+.photo{position:relative;aspect-ratio:4/5;border-radius:var(--r);overflow:hidden;background:var(--linea)}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .7s ease}
+.photo img.off{opacity:0}
+.textlink{display:inline-block;margin-top:1.1rem;font-weight:600;color:var(--madera);text-underline-offset:4px;text-decoration-thickness:1.5px}
+.textlink:hover{color:var(--nogal)}
+.photo{transition:box-shadow .7s ease}
+.moment[data-m="noche"] .textlink{color:var(--neon)}
+.moment[data-m="noche"] .textlink:hover{color:#fff7da}
+.moment[data-m="noche"] .photo{box-shadow:0 0 0 1px rgba(var(--glow),.45),0 0 70px rgba(var(--glow),.22)}
+.moment[data-m="noche"]{background:var(--noche);color:var(--noche-txt)}
+.moment[data-m="noche"] p{color:var(--noche-muted)}
+.moment[data-m="noche"] .moments{border-color:var(--noche-2)}
+.moment[data-m="noche"] .moments button{color:var(--noche-muted)}
+.moment[data-m="noche"] .moments button[aria-selected="true"]{background:var(--neon);color:var(--nogal);box-shadow:0 0 18px rgba(var(--glow),.45)}
+.moment[data-m="noche"] :focus-visible{outline-color:var(--neon)}
+
+/* ---------- Horario y mapa ---------- */
+.visit-grid{display:grid;gap:3rem}
+.days{margin-top:1.8rem;border-top:1.5px solid var(--nogal)}
+.day{display:grid;grid-template-columns:7.5rem 1fr;gap:.25rem 1rem;align-items:baseline;padding:.85rem .2rem .85rem .8rem;border-bottom:1px solid var(--linea)}
+.day dt{font-family:var(--serif);font-weight:700;font-size:1.3rem;line-height:1.2}
+.day dd{color:var(--nogal-2);display:flex;flex-wrap:wrap;gap:.1rem 1.4rem;font-variant-numeric:tabular-nums}
+.day dd span{white-space:nowrap}
+.day.closed dd{font-style:italic}
+.day.today{background:linear-gradient(90deg,rgba(var(--glow),.22),rgba(var(--glow),0) 85%);box-shadow:inset 3px 0 0 var(--neon-core)}
+.day.today dd{color:var(--nogal)}
+.day dt small{display:block;font-family:var(--sans);font-size:.8rem;font-weight:500;color:var(--madera)}
+.map{border-radius:var(--r);overflow:hidden;border:1px solid var(--linea);background:#fff;display:flex;flex-direction:column;min-height:360px}
+/* Mapa de Google en tonos claros y neutros, a juego con la pared encalada */
+.map-embed{position:relative;flex:1;min-height:320px;background:var(--cal)}
+.map-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(1) contrast(.95) brightness(1.08)}
+.address{padding:1.1rem 1.25rem;display:flex;flex-wrap:wrap;gap:.8rem 1.2rem;align-items:center;justify-content:space-between;border-top:1px solid var(--linea)}
+.address strong{font-family:var(--serif);font-size:1.3rem;display:block;line-height:1.2}
+.address span{color:var(--nogal-2);font-size:.95rem}
+
+/* ---------- Reseñas ---------- */
+.reviews{background:var(--noche);color:var(--noche-txt)}
+.reviews .rv-head p,.reviews .rv-cta p,.reviews .rv-fallback p,.reviews .rv-attr,.reviews .rv-count{color:var(--noche-muted)}
+.reviews .btn-line{color:var(--noche-txt);border-color:rgba(243,235,221,.45)}
+.reviews .btn-line:hover{background:var(--noche-txt);color:var(--nogal)}
+.reviews .rv-attr a{color:var(--neon)}
+.reviews :focus-visible{outline-color:var(--neon)}
+.rv-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1.2rem 2rem;margin-bottom:2rem}
+.rv-head h2{margin-bottom:.4rem}
+.rv-score{display:flex;align-items:center;gap:1rem}
+.rv-score[hidden]{display:none}
+.rv-num{font-family:var(--serif);font-weight:700;font-size:3.6rem;line-height:1}
+.stars{--p:100%;display:inline-block;font-size:1.1rem;letter-spacing:.12em;line-height:1;background:linear-gradient(90deg,var(--neon-core) var(--p),var(--linea) var(--p));-webkit-background-clip:text;background-clip:text;color:transparent}
+.rv-count{display:block;color:var(--nogal-2);font-size:.88rem;margin-top:.35rem}
+.rv-list{list-style:none;display:grid;grid-auto-flow:column;grid-auto-columns:min(85%,340px);gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:-1.25rem;padding:0 1.25rem 1rem}
+.rv-list:empty{display:none}
+.rv-card{scroll-snap-align:start;background:#fff;border:1px solid var(--linea);border-radius:var(--r);padding:1.3rem;display:flex;flex-direction:column;gap:.8rem}
+.rv-text{color:var(--nogal);font-size:.97rem;display:-webkit-box;-webkit-line-clamp:6;-webkit-box-orient:vertical;overflow:hidden;max-width:none}
+.rv-text.open{-webkit-line-clamp:unset;display:block}
+.rv-more{align-self:flex-start;background:none;border:0;padding:0;font:inherit;font-size:.88rem;font-weight:600;color:var(--madera);cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.rv-author{display:flex;align-items:center;gap:.7rem;margin-top:auto;padding-top:.7rem;border-top:1px solid var(--linea)}
+.rv-author img{width:36px;height:36px;border-radius:50%;flex:none;background:var(--cal-2)}
+.rv-author a,.rv-author span{font-weight:600;font-size:.93rem;text-decoration:none}
+.rv-author small{display:block;color:var(--nogal-2);font-size:.8rem;font-weight:400}
+.rv-attr{color:var(--nogal-2);font-size:.85rem;margin-top:.4rem}
+.rv-attr[hidden],.rv-fallback[hidden]{display:none}
+.rv-fallback{display:flex;flex-wrap:wrap;gap:1rem 1.5rem;align-items:center}
+.rv-cta{margin-top:3.5rem;padding-top:2.2rem;border-top:1.5px solid rgba(var(--glow),.55);display:grid;gap:1.2rem;justify-items:start}
+.rv-cta p{margin-top:.35rem}
+@media (min-width:860px){
+  .rv-list{grid-auto-flow:row;grid-template-columns:repeat(3,1fr);overflow:visible;margin-inline:0;padding:0}
+  .rv-cta{grid-template-columns:1fr auto;align-items:center}
+}
+
+/* ---------- Pie: el suelo de baldosa ---------- */
+.floor{position:relative;height:190px;background:var(--cal-2);overflow:hidden}
+/* Hojas que se van difuminando hacia el pie de página */
+.floor::before{content:"";position:absolute;inset:0;background:url(fondo-pie.png) center top/260px 260px repeat;
+  -webkit-mask-image:linear-gradient(#000 0%,rgba(0,0,0,.6) 40%,transparent 100%);mask-image:linear-gradient(#000 0%,rgba(0,0,0,.6) 40%,transparent 100%)}
+footer{padding:1.5rem 0 7.5rem;background:var(--cal-2);text-align:center}
+footer .neon{font-size:3.2rem;display:inline-block}
+footer address{font-style:normal;color:var(--nogal-2);margin:.9rem 0 1.3rem}
+.social{display:flex;justify-content:center;flex-wrap:wrap;gap:.6rem 1.6rem}
+.social a{display:inline-flex;align-items:center;gap:.55rem;text-decoration:none;font-weight:600}
+.social a:hover{color:var(--madera)}
+.social svg{width:22px;height:22px}
+.legal-links{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;justify-content:center;margin:1.8rem auto 0;font-size:.88rem}
+.legal-links a,.legal-links button{color:var(--nogal-2);background:none;border:0;padding:0;font:inherit;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.legal-links a:hover,.legal-links button:hover{color:var(--nogal)}
+.copy{margin:1.4rem auto 0;font-size:.85rem;color:var(--nogal-2)}
+
+/* ---------- Botón fijo de la carta ---------- */
+.fab{position:fixed;right:max(1.1rem,env(safe-area-inset-right));bottom:max(1.1rem,env(safe-area-inset-bottom));z-index:50;display:inline-flex;align-items:center;gap:.55rem;padding:.9rem 1.25rem;border-radius:var(--r);background:var(--neon);color:var(--nogal);font-weight:600;text-decoration:none;box-shadow:0 8px 24px rgba(43,29,20,.22),0 0 22px rgba(var(--glow),.35);transition:box-shadow .2s}
+.fab:hover{box-shadow:0 8px 24px rgba(43,29,20,.22),0 0 32px rgba(var(--glow),.7)}
+.fab svg{width:22px;height:22px;flex:none}
+
+/* ---------- Escritorio ---------- */
+@media (min-width:860px){
+  section{padding:7rem 0}
+  .hero{padding:0;min-height:min(92svh,820px);display:grid;align-items:stretch}
+  .hero-grid{grid-template-columns:1fr 1.1fr;gap:4rem;align-items:stretch}
+  .hero-text{align-self:center;padding:4rem 0}
+  .hero-photo{aspect-ratio:auto;min-height:540px;border-radius:0 0 0 var(--r);margin-right:calc((min(1120px,100vw - 2.5rem) - 100vw)/2)}
+  .moment-grid{grid-template-columns:1.1fr .9fr;gap:5rem}
+  .visit-grid{grid-template-columns:1fr 1fr;gap:4.5rem;align-items:start}
+  .map{position:sticky;top:2rem;min-height:520px}
+}
+/* ---------- Móvil ---------- */
+@media (max-width:600px){
+  body{font-size:1rem}
+  .wrap{width:calc(100% - 2rem)}
+  section{padding:4rem 0}
+  .hero{padding:2rem 0 3rem}
+  .hero h1{font-size:3.9rem;text-align:center}
+  .colgante{margin-bottom:1.2rem}
+  .panel{padding:1.9rem 1.35rem .7rem}
+  .lede{font-size:1.05rem}
+  .day{grid-template-columns:6.5rem 1fr;gap:.2rem .8rem}
+  .rv-list{margin-inline:-1rem;padding:0 1rem 1rem}
+  footer .neon{font-size:2.7rem}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<header class="hero" id="inicio">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <div class="colgante"><div class="pendulo">
+        <span class="hilo hilo-i" aria-hidden="true"></span><span class="hilo hilo-d" aria-hidden="true"></span>
+        <div class="panel">
+          <svg class="madera mi" viewBox="0 0 20 56" aria-hidden="true">
+            <defs>
+              <linearGradient id="mwi" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dcae70"/><stop offset=".55" stop-color="#bf8845"/><stop offset="1" stop-color="#a06f35"/></linearGradient>
+              <linearGradient id="msi" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff0cc" stop-opacity=".55"/><stop offset=".3" stop-color="#fff0cc" stop-opacity="0"/><stop offset=".62" stop-color="#3c1e08" stop-opacity="0"/><stop offset="1" stop-color="#3c1e08" stop-opacity=".45"/></linearGradient>
+              <linearGradient id="mmi" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4f2ee"/><stop offset=".45" stop-color="#a29d95"/><stop offset="1" stop-color="#5f5a53"/></linearGradient>
+            </defs>
+            <path id="mpi" d="M5.5 1.5H14.5Q17.5 1.5 17.5 5V11Q17.5 15 14 20Q15.3 27 17.5 40L17.8 52.5Q17.8 54.5 15.8 54.5H4.2Q2.2 54.5 2.2 52.5L2.5 40Q4.7 27 6 20Q2.5 15 2.5 11V5Q2.5 1.5 5.5 1.5Z" fill="url(#mwi)" stroke="#4a2a10" stroke-opacity=".65" stroke-width=".55"/>
+            <path d="M5.5 1.5H14.5Q17.5 1.5 17.5 5V11Q17.5 15 14 20Q15.3 27 17.5 40L17.8 52.5Q17.8 54.5 15.8 54.5H4.2Q2.2 54.5 2.2 52.5L2.5 40Q4.7 27 6 20Q2.5 15 2.5 11V5Q2.5 1.5 5.5 1.5Z" fill="url(#msi)"/>
+            <g fill="none" stroke="#5a320f" stroke-opacity=".38" stroke-width=".35" stroke-linecap="round">
+              <path d="M5.2 4Q4.8 20 6.4 40"/><path d="M7.6 6Q7.3 28 8 52"/><path d="M12.4 5Q12.8 24 11.9 46"/><path d="M14.8 8Q15.3 28 14.6 50"/>
+            </g>
+            <path d="M9.5 21.5H10.5L10.8 54.5H9.2Z" fill="#2a1507" fill-opacity=".85"/>
+            <path d="M4 40L3.6 52.5M16 40L16.4 52.5" stroke="#fff0cc" stroke-opacity=".35" stroke-width=".5" fill="none"/>
+            <rect x=".8" y="19" width="18.4" height="7" rx="3.2" fill="url(#mmi)" stroke="#3f3b36" stroke-opacity=".7" stroke-width=".5"/>
+            <path d="M4 19.4L5.6 25.6M7.6 19.4L9.2 25.6M10.8 19.4L12.4 25.6M14.4 19.4L16 25.6" stroke="#3f3b36" stroke-opacity=".45" stroke-width=".5"/>
+            <path d="M2.6 20.4H17.4" stroke="#fff" stroke-opacity=".75" stroke-width=".6" stroke-linecap="round"/>
+          </svg>
+          <svg class="madera md" viewBox="0 0 20 56" aria-hidden="true">
+            <defs>
+              <linearGradient id="mwd" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dcae70"/><stop offset=".55" stop-color="#bf8845"/><stop offset="1" stop-color="#a06f35"/></linearGradient>
+              <linearGradient id="msd" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff0cc" stop-opacity=".55"/><stop offset=".3" stop-color="#fff0cc" stop-opacity="0"/><stop offset=".62" stop-color="#3c1e08" stop-opacity="0"/><stop offset="1" stop-color="#3c1e08" stop-opacity=".45"/></linearGradient>
+              <linearGradient id="mmd" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4f2ee"/><stop offset=".45" stop-color="#a29d95"/><stop offset="1" stop-color="#5f5a53"/></linearGradient>
+            </defs>
+            <path id="mpd" d="M5.5 1.5H14.5Q17.5 1.5 17.5 5V11Q17.5 15 14 20Q15.3 27 17.5 40L17.8 52.5Q17.8 54.5 15.8 54.5H4.2Q2.2 54.5 2.2 52.5L2.5 40Q4.7 27 6 20Q2.5 15 2.5 11V5Q2.5 1.5 5.5 1.5Z" fill="url(#mwd)" stroke="#4a2a10" stroke-opacity=".65" stroke-width=".55"/>
+            <path d="M5.5 1.5H14.5Q17.5 1.5 17.5 5V11Q17.5 15 14 20Q15.3 27 17.5 40L17.8 52.5Q17.8 54.5 15.8 54.5H4.2Q2.2 54.5 2.2 52.5L2.5 40Q4.7 27 6 20Q2.5 15 2.5 11V5Q2.5 1.5 5.5 1.5Z" fill="url(#msd)"/>
+            <g fill="none" stroke="#5a320f" stroke-opacity=".38" stroke-width=".35" stroke-linecap="round">
+              <path d="M5.2 4Q4.8 20 6.4 40"/><path d="M7.6 6Q7.3 28 8 52"/><path d="M12.4 5Q12.8 24 11.9 46"/><path d="M14.8 8Q15.3 28 14.6 50"/>
+            </g>
+            <path d="M9.5 21.5H10.5L10.8 54.5H9.2Z" fill="#2a1507" fill-opacity=".85"/>
+            <path d="M4 40L3.6 52.5M16 40L16.4 52.5" stroke="#fff0cc" stroke-opacity=".35" stroke-width=".5" fill="none"/>
+            <rect x=".8" y="19" width="18.4" height="7" rx="3.2" fill="url(#mmd)" stroke="#3f3b36" stroke-opacity=".7" stroke-width=".5"/>
+            <path d="M4 19.4L5.6 25.6M7.6 19.4L9.2 25.6M10.8 19.4L12.4 25.6M14.4 19.4L16 25.6" stroke="#3f3b36" stroke-opacity=".45" stroke-width=".5"/>
+            <path d="M2.6 20.4H17.4" stroke="#fff" stroke-opacity=".75" stroke-width=".6" stroke-linecap="round"/>
+          </svg>
+          <h1 class="neon flicker">Café Tramuntana</h1>
+        </div>
+      </div></div>
+      <p class="lede">Cafetería y cervecería en la Av. de la Pau, 34, en Ibi. Café y desayunos por la mañana; cervezas, copas y tapas por la noche.</p>
+      <div class="estado">
+        <p class="status" id="status" aria-live="polite"><span class="dot"></span><span id="status-text">Comprobando el horario…</span></p>
+        <div class="aviso" id="aviso-hero" role="status" hidden></div>
+      </div>
+      <div class="actions">
+        <a class="btn btn-neon" href="carta.html">Ver la carta</a>
+        <a class="btn btn-line" href="#visitanos">Horario y cómo llegar</a>
+      </div>
+    </div>
+    <figure class="hero-photo">
+      <img src="fondo.jpg" alt="Interior de Café Tramuntana: pared de ladrillo blanco, lámparas de mimbre, helechos y el neón con el nombre del local" width="1600" height="1000" fetchpriority="high">
+    </figure>
+  </div>
+</header>
+
+<main>
+<section class="moment" id="nosotros" data-m="dia">
+  <div class="wrap moment-grid">
+    <div>
+      <h2>Un mismo local, dos maneras de vivirlo</h2>
+      <p>Un sitio acogedor donde apetece quedarse, a cualquier hora. Elige el momento y te contamos qué te espera.</p>
+      <div class="moments" role="tablist" aria-label="Momento del día">
+        <button role="tab" id="tab-dia" aria-selected="true" aria-controls="panel-dia" data-m="dia">De día</button>
+        <button role="tab" id="tab-noche" aria-selected="false" aria-controls="panel-noche" data-m="noche">De noche</button>
+      </div>
+      <div class="moment-text">
+        <div id="panel-dia" role="tabpanel" aria-labelledby="tab-dia">
+          <h3>Café recién hecho y buena mesa</h3>
+          <p>Empieza el día con un buen café y un desayuno a tu medida, o vuelve por la tarde a merendar. Y cuando aprieta el hambre, bocadillos y tapas.</p>
+          <a class="textlink" href="carta.html#cafes">Ver cafés y desayunos</a>
+        </div>
+        <div id="panel-noche" role="tabpanel" aria-labelledby="tab-noche" hidden>
+          <h3>Cervezas, copas y cócteles</h3>
+          <p>Cuando cae la tarde se encienden las luces cálidas: cervezas, gin-tonics y cócteles, y tapas para compartir con los amigos.</p>
+          <a class="textlink" href="carta.html#cervezas">Ver cervezas y cócteles</a>
+        </div>
+      </div>
+    </div>
+    <div class="photo">
+      <img id="img-dia" src="dia.png" alt="El local de día, con mesas altas y suelo de baldosa hidráulica" loading="lazy">
+      <img id="img-noche" class="off" src="noche.png" alt="Un gin-tonic en copa grabada con el nombre de Café Tramuntana" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visitanos">
+  <div class="wrap visit-grid">
+    <div>
+      <h2>Cuándo abrimos</h2>
+      <p>Este es nuestro horario habitual. Si cambia algo, lo avisamos aquí mismo.</p>
+      <div class="aviso aviso-visita" id="aviso-visita" role="status" hidden></div>
+      <dl class="days" id="days"></dl>
+    </div>
+    <div class="map">
+      <div class="map-embed">
+        <iframe title="Mapa de Café Tramuntana en Ibi" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://maps.google.com/maps?q=Av.+de+la+Pau,+34,+03440+Ibi,+Alicante&z=17&output=embed"></iframe>
+      </div>
+      <div class="address">
+        <div><strong>Av. de la Pau, 34</strong><span>03440 Ibi, Alicante</span></div>
+        <a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&amp;destination=Av.+de+la+Pau,+34,+03440+Ibi,+Alicante" target="_blank" rel="noopener">Cómo llegar</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="resenas" aria-labelledby="t-resenas">
+  <div class="wrap">
+    <div class="rv-head">
+      <div>
+        <h2 id="t-resenas">Lo que dicen de nosotros</h2>
+        <p>Opiniones de clientes en Google.</p>
+      </div>
+      <div class="rv-score" id="rv-score" hidden>
+        <span class="rv-num" id="rv-num"></span>
+        <div><span class="stars" id="rv-stars" aria-hidden="true">★★★★★</span><span class="rv-count" id="rv-count"></span></div>
+      </div>
+    </div>
+
+    <ul class="rv-list" id="rv-list" aria-label="Reseñas de clientes"></ul>
+    <p class="rv-attr" id="rv-attr" hidden>Reseñas de Google. <a id="rv-all" href="#" target="_blank" rel="noopener">Ver todas</a></p>
+
+    <div class="rv-fallback" id="rv-fallback">
+      <p>Las opiniones de nuestros clientes están en nuestra ficha de Google.</p>
+      <a class="btn btn-line" id="rv-fallback-link" href="#" target="_blank" rel="noopener">Ver las reseñas en Google</a>
+    </div>
+
+    <div class="rv-cta">
+      <div>
+        <h3>¿Ya nos has visitado?</h3>
+        <p>Tu opinión ayuda a que más gente de Ibi nos descubra. Solo te llevará un minuto.</p>
+      </div>
+      <a class="btn btn-neon" id="rv-write" href="#" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg>
+        Escribir una reseña
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<div class="floor" aria-hidden="true"></div>
+<footer>
+  <div class="wrap">
+    <p class="neon" aria-hidden="true">Café Tramuntana</p>
+    <address>Av. de la Pau, 34. 03440 Ibi, Alicante</address>
+    <div class="social">
+      <a href="https://www.instagram.com/tramuntanaibi" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".6" fill="currentColor"/></svg>
+        Instagram
+      </a>
+      <a href="https://www.facebook.com/p/Caf%C3%A9Tramuntana-100092449556893/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M15.5 7.5h-1.8a2.2 2.2 0 0 0-2.2 2.2V21M9 12.5h6"/></svg>
+        Facebook
+      </a>
+    </div>
+    <nav class="legal-links" aria-label="Enlaces legales">
+      <a href="legal.html#aviso">Aviso legal</a>
+      <a href="legal.html#privacidad">Privacidad</a>
+      <a href="legal.html#cookies">Cookies</a>
+      <button type="button" data-cookie-settings>Configurar cookies</button>
+    </nav>
+    <p class="copy">© <span id="year">2026</span> Café Tramuntana</p>
+  </div>
+</footer>
+
+<a class="fab" href="carta.html">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h12v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8z"/><path d="M16 10h2a2.5 2.5 0 0 1 0 5h-2"/><path d="M8 2.5c0 1.2 1 1.3 1 2.5M12 2.5c0 1.2 1 1.3 1 2.5"/></svg>
+  Ver la carta
+</a>
+
+<script>
+(function(){
+  /* Horario habitual (copia de seguridad). Índice 0 = domingo. Minutos desde medianoche.
+     El horario real se lee de la pestaña «Horario» de la hoja de Google. */
+  var DEFAULT_H=[
+    {n:'Domingo',s:[]},
+    {n:'Lunes',s:[[510,840],[990,1320]]},
+    {n:'Martes',s:[[510,840],[990,1320]]},
+    {n:'Miércoles',s:[[510,840],[990,1320]]},
+    {n:'Jueves',s:[[510,840],[990,1350]]},
+    {n:'Viernes',s:[[510,840],[990,1440]]},
+    {n:'Sábado',s:[[540,840],[1020,1440]]}
+  ];
+  var HORARIO_URL='https://docs.google.com/spreadsheets/d/1j95VYi6wmIEYJ1HAUu96MOBv_wDKIOze5eoJGfa4j44/gviz/tq?tqx=out:csv&sheet=Horario';
+  var CACHE_KEY='tr-horario-v1';
+  var order=[1,2,3,4,5,6,0];
+  function fmt(m){var h=Math.floor(m/60)%24,mm=m%60;return (h<10?'0':'')+h+':'+(mm<10?'0':'')+mm}
+
+  /* Hora actual en Madrid */
+  function now(){
+    var p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Madrid',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date()),o={};
+    p.forEach(function(x){o[x.type]=x.value});
+    var map={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6};
+    return {d:map[o.weekday],m:(parseInt(o.hour,10)%24)*60+parseInt(o.minute,10)};
+  }
+  var t=now();
+
+  /* Pinta la lista del horario, el estado «abierto/cerrado» y los avisos */
+  function pintar(H,avisos){
+    var t=now(),html='';
+    order.forEach(function(i){
+      var d=H[i],cls='day'+(i===t.d?' today':'')+(d.s.length?'':' closed');
+      var body=d.s.length?d.s.map(function(r){return '<span>'+fmt(r[0])+' a '+fmt(r[1])+'</span>'}).join(''):'<span>Cerrado</span>';
+      html+='<div class="'+cls+'"><dt>'+d.n+(i===t.d?'<small>Hoy</small>':'')+'</dt><dd>'+body+'</dd></div>';
+    });
+    document.getElementById('days').innerHTML=html;
+
+    var st=document.getElementById('status'),tx=document.getElementById('status-text');
+    var today=H[t.d].s,openNow=null;
+    today.forEach(function(r){if(t.m>=r[0]&&t.m<r[1])openNow=r});
+    st.classList.toggle('open',!!openNow);
+    if(openNow){
+      tx.textContent='Abierto ahora, hasta las '+fmt(openNow[1]);
+    }else{
+      var next=null,label='';
+      today.forEach(function(r){if(!next&&t.m<r[0]){next=r;label='hoy a las '+fmt(r[0])}});
+      for(var k=1;k<=7&&!next;k++){
+        var di=(t.d+k)%7;
+        if(H[di].s.length){next=H[di].s[0];label=(k===1?'mañana':'el '+H[di].n.toLowerCase())+' a las '+fmt(next[0])}
+      }
+      tx.textContent=next?'Cerrado ahora. Abrimos '+label:'Cerrado ahora.';
+    }
+
+    ['aviso-hero','aviso-visita'].forEach(function(id){
+      var av=document.getElementById(id);av.textContent='';
+      (avisos||[]).forEach(function(m){var p=document.createElement('p');p.textContent=m;av.appendChild(p)});
+      av.hidden=!(avisos&&avisos.length);
+    });
+  }
+
+  /* ---- Lectura de la pestaña «Horario» ---- */
+  function norm(x){return String(x||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim()}
+  function parseCSV(x){
+    var rows=[],row=[],f='',q=false,i,c;
+    x=x.replace(/^\uFEFF/,'');
+    for(i=0;i<x.length;i++){
+      c=x[i];
+      if(q){if(c==='"'){if(x[i+1]==='"'){f+='"';i++}else q=false}else f+=c}
+      else if(c==='"')q=true;
+      else if(c===','){row.push(f);f=''}
+      else if(c==='\n'||c==='\r'){if(c==='\r'&&x[i+1]==='\n')i++;row.push(f);f='';rows.push(row);row=[]}
+      else f+=c;
+    }
+    if(f!==''||row.length){row.push(f);rows.push(row)}
+    return rows;
+  }
+  /* «08:30-14:00» (o «8.30 a 14.00») -> [510,840]; las 00:00 del cierre son medianoche */
+  function turno(x){
+    var m=String(x||'').match(/(\d{1,2})[:.h](\d{2})\s*(?:-|–|—|a)\s*(\d{1,2})[:.h](\d{2})/i);
+    if(!m)return null;
+    var a=+m[1]*60+ +m[2],b=+m[3]*60+ +m[4];
+    if(b<=a)b+=1440;
+    return a<1440&&b<=2880?[a,b]:null;
+  }
+  var NOMBRES=['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'],CLAVES=NOMBRES.map(norm);
+  function leer(rows){
+    var dias={},avisos=[],n=0;
+    rows.slice(1).forEach(function(r){
+      var d=norm(r[0]);
+      if(d==='aviso'){var m=String(r[1]||'').trim();if(m)avisos.push(m);return}
+      var i=CLAVES.indexOf(d);if(i<0)return;
+      var s=[];[r[1],r[2]].forEach(function(c){var x=turno(c);if(x)s.push(x)});
+      dias[i]=s;n++;
+    });
+    if(n<7)return null;           /* hoja incompleta: se queda el horario habitual */
+    return {H:NOMBRES.map(function(nm,i){return {n:nm,s:dias[i]}}),avisos:avisos};
+  }
+
+  var cached=null;
+  try{cached=JSON.parse(localStorage.getItem(CACHE_KEY)||'null')}catch(e){}
+  pintar(cached?cached.H:DEFAULT_H,cached?cached.avisos:[]);
+  if(window.fetch){
+    var ctl=window.AbortController?new AbortController():null,to=setTimeout(function(){ctl&&ctl.abort()},6000);
+    fetch(HORARIO_URL+'&t='+Date.now(),{cache:'no-store',signal:ctl?ctl.signal:undefined})
+      .then(function(r){if(!r.ok)throw new Error(r.status);return r.text()})
+      .then(function(x){
+        clearTimeout(to);
+        var d=leer(parseCSV(x));if(!d)return;
+        try{localStorage.setItem(CACHE_KEY,JSON.stringify(d))}catch(e){}
+        pintar(d.H,d.avisos);
+      }).catch(function(){clearTimeout(to)});
+  }
+
+  /* De día / de noche: la sección cambia de luz */
+  var sec=document.getElementById('nosotros'),tabs=sec.querySelectorAll('.moments button');
+  function setMoment(m,focus){
+    sec.dataset.m=m;
+    tabs.forEach(function(b){var on=b.dataset.m===m;b.setAttribute('aria-selected',on);b.tabIndex=on?0:-1;if(on&&focus)b.focus()});
+    document.getElementById('panel-dia').hidden=m!=='dia';
+    document.getElementById('panel-noche').hidden=m!=='noche';
+    document.getElementById('img-dia').classList.toggle('off',m!=='dia');
+    document.getElementById('img-noche').classList.toggle('off',m!=='noche');
+  }
+  tabs.forEach(function(b){
+    b.addEventListener('click',function(){setMoment(b.dataset.m)});
+    b.addEventListener('keydown',function(e){
+      if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();setMoment(b.dataset.m==='dia'?'noche':'dia',true)}
+    });
+  });
+  setMoment(t.m>=1080||t.m<360?'noche':'dia');
+
+  document.getElementById('year').textContent=new Date().getFullYear();
+
+  /* El letrero se balancea como un péndulo colgado del techo: mide cuánto hay del techo al letrero */
+  function techo(){
+    var c=document.querySelector('.colgante'),hero=document.querySelector('.hero');if(!c||!hero)return;
+    document.documentElement.style.setProperty('--techo',Math.max(0,c.offsetTop-hero.offsetTop)+'px');
+  }
+  techo();window.addEventListener('resize',techo);
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(techo);
+
+})();
+</script>
+<script>
+/* =====================================================================
+   RESEÑAS DE GOOGLE
+   - PLACE_ID: identificador de Tramuntana en Google (ya está puesto).
+   - GOOGLE_API_KEY: pega aquí tu clave de Google Maps Platform.
+     Mientras esté vacía, se muestra un botón a la ficha de Google
+     en lugar de las reseñas.
+   ===================================================================== */
+(function(){
+  var PLACE_ID='ChIJfYmv5-gqYg0RJ-qEwsOOt_Q';
+  var GOOGLE_API_KEY='';
+
+  var mapsUrl='https://www.google.com/maps/place/?q=place_id:'+PLACE_ID;
+  document.getElementById('rv-write').href='https://search.google.com/local/writereview?placeid='+PLACE_ID;
+  document.getElementById('rv-fallback-link').href=mapsUrl;
+  document.getElementById('rv-all').href=mapsUrl;
+
+  if(!GOOGLE_API_KEY)return;
+
+  function stars(el,r){el.style.setProperty('--p',Math.max(0,Math.min(5,r))/5*100+'%')}
+  function el(tag,cls,text){var e=document.createElement(tag);if(cls)e.className=cls;if(text!=null)e.textContent=text;return e}
+
+  function render(place){
+    var list=document.getElementById('rv-list');
+    var reviews=(place.reviews||[]).filter(function(r){return r&&(typeof r.text==='string'?r.text:(r.text&&r.text.text))});
+    if(place.rating){
+      document.getElementById('rv-num').textContent=place.rating.toLocaleString('es-ES',{minimumFractionDigits:1,maximumFractionDigits:1});
+      stars(document.getElementById('rv-stars'),place.rating);
+      if(place.userRatingCount)document.getElementById('rv-count').textContent=place.userRatingCount+' reseñas en Google';
+      document.getElementById('rv-score').hidden=false;
+      document.getElementById('rv-score').setAttribute('aria-label','Valoración media '+place.rating+' de 5');
+    }
+    if(place.googleMapsURI)document.getElementById('rv-all').href=place.googleMapsURI;
+    if(!reviews.length)return;
+
+    reviews.forEach(function(r){
+      var li=el('li','rv-card');
+      var st=el('span','stars','★★★★★');stars(st,r.rating||0);
+      st.setAttribute('role','img');st.setAttribute('aria-label',(r.rating||0)+' de 5 estrellas');
+      li.appendChild(st);
+
+      var txt=typeof r.text==='string'?r.text:r.text.text;
+      var p=el('p','rv-text',txt);li.appendChild(p);
+      if(txt.length>260){
+        var more=el('button','rv-more','Leer más');more.type='button';
+        more.addEventListener('click',function(){var o=p.classList.toggle('open');more.textContent=o?'Leer menos':'Leer más'});
+        li.appendChild(more);
+      }
+
+      var a=r.authorAttribution||{},au=el('div','rv-author');
+      if(a.photoURI){var im=el('img');im.src=a.photoURI;im.alt='';im.loading='lazy';im.referrerPolicy='no-referrer';au.appendChild(im)}
+      var who=el('div'),name;
+      if(a.uri){name=el('a',null,a.displayName||'Cliente de Google');name.href=a.uri;name.target='_blank';name.rel='noopener'}
+      else name=el('span',null,a.displayName||'Cliente de Google');
+      who.appendChild(name);
+      if(r.relativePublishTimeDescription)who.appendChild(el('small',null,r.relativePublishTimeDescription));
+      au.appendChild(who);li.appendChild(au);
+      list.appendChild(li);
+    });
+    document.getElementById('rv-attr').hidden=false;
+    document.getElementById('rv-fallback').hidden=true;
+  }
+
+  window.__tramuntanaReviews=function(){
+    google.maps.importLibrary('places').then(function(lib){
+      var place=new lib.Place({id:PLACE_ID,requestedLanguage:'es'});
+      return place.fetchFields({fields:['rating','userRatingCount','reviews','googleMapsURI']}).then(function(){render(place)});
+    }).catch(function(e){console.warn('No se pudieron cargar las reseñas de Google:',e)});
+  };
+
+  /* Solo se conecta con Google cuando el visitante se acerca a la sección */
+  var loaded=false;
+  function load(){
+    if(loaded)return;loaded=true;
+    var s=document.createElement('script');
+    s.async=true;
+    s.src='https://maps.googleapis.com/maps/api/js?key='+encodeURIComponent(GOOGLE_API_KEY)+'&v=weekly&loading=async&language=es&callback=__tramuntanaReviews';
+    document.head.appendChild(s);
+  }
+  var sec=document.getElementById('resenas');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){load();io.disconnect()}},{rootMargin:'400px 0px'});
+    io.observe(sec);
+  }else load();
+})();
+</script>
+<script src="cookies.js" defer></script>
+</body>
+</html>
