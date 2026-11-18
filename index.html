@@ -521,6 +521,8 @@ footer address{font-style:normal;color:var(--nogal-2);margin:.9rem 0 1.3rem}
     var EN=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],sp=[];
     order.forEach(function(i){H[i].s.forEach(function(r){
       sp.push({'@type':'OpeningHoursSpecification',dayOfWeek:EN[i],opens:fmt(r[0]),closes:r[1]>=1440?'23:59':fmt(r[1])});
+      /* si cierra pasada la medianoche (p. ej. 01:30), la parte de después de las 00:00 pertenece al día siguiente */
+      if(r[1]>1440)sp.push({'@type':'OpeningHoursSpecification',dayOfWeek:EN[(i+1)%7],opens:'00:00',closes:fmt(r[1]-1440)});
     })});
     o.openingHoursSpecification=sp;el.textContent=JSON.stringify(o);
   }
@@ -539,6 +541,8 @@ footer address{font-style:normal;color:var(--nogal-2);margin:.9rem 0 1.3rem}
     var st=document.getElementById('status'),tx=document.getElementById('status-text');
     var today=H[t.d].s,openNow=null;
     today.forEach(function(r){if(t.m>=r[0]&&t.m<r[1])openNow=r});
+    /* turno de ayer que se alarga pasada la medianoche (cierra a la 01:30, por ejemplo) */
+    H[(t.d+6)%7].s.forEach(function(r){if(r[1]>1440&&t.m+1440<r[1])openNow=[r[0],r[1]]});
     st.classList.toggle('open',!!openNow);
     if(openNow){
       tx.textContent='Abierto ahora, hasta las '+fmt(openNow[1]);
