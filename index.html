@@ -113,18 +113,12 @@ p{color:var(--nogal-2);max-width:58ch}
 .pendulo{position:relative;transform-origin:50% calc(var(--techo,90px)*-1);animation:balanceo 3.2s .2s both}
 .panel{position:relative;
   padding:2.5rem 2.1rem 0 1.72rem;border-radius:14px;
-  background:linear-gradient(140deg,rgba(255,255,255,.72),rgba(255,255,255,.2) 55%,rgba(43,29,20,.07));
+  background:#fbfaf6;
   border:1px solid rgba(43,29,20,.22);
   /* grosor del metacrilato (canto) + sombra de contacto + sombra proyectada sobre la pared */
-  box-shadow:inset 0 0 0 1px rgba(255,255,255,.8),inset 0 2px 7px rgba(255,255,255,.65),inset 0 -3px 6px rgba(43,29,20,.1),
-             0 3px 0 #cdc8be,0 4px 1px rgba(43,29,20,.32),0 10px 14px -4px rgba(43,29,20,.32),
+  box-shadow:0 3px 0 #cdc8be,0 4px 1px rgba(43,29,20,.32),0 10px 14px -4px rgba(43,29,20,.32),
              20px 34px 44px -14px rgba(43,29,20,.38)}
-/* Reflejo en diagonal sobre el metacrilato */
-.panel::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
-  background:linear-gradient(112deg,transparent 22%,rgba(255,255,255,.5) 30%,rgba(255,255,255,.08) 38%,transparent 44%,transparent 62%,rgba(255,255,255,.28) 66%,transparent 72%)}
 /* La luz del neón tiñe el panel y la pared de alrededor */
-.panel::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
-  background:radial-gradient(ellipse at 50% 58%,rgba(255,186,64,.07),rgba(255,186,64,0) 75%);animation:luz 2.1s 1.55s both}
 .colgante::after{content:"";position:absolute;inset:-70px -60px -90px;z-index:-1;pointer-events:none;border-radius:50%;
   background:radial-gradient(ellipse at 50% 55%,rgba(255,176,46,.14),rgba(255,176,46,0) 65%);animation:luz 2.1s 1.55s both}
 .panel .neon{margin:0;position:relative}
@@ -208,7 +202,7 @@ p{color:var(--nogal-2);max-width:58ch}
 
 /* ---------- Horario y mapa ---------- */
 .visit-grid{display:grid;gap:3rem}
-.days{margin-top:1.8rem;border-top:1.5px solid var(--nogal)}
+.days{margin-top:1.8rem;background:#fff;border:1px solid var(--linea);border-top:1.5px solid var(--nogal);border-radius:var(--r);padding:0 .5rem}
 .day{display:grid;grid-template-columns:7.5rem 1fr;gap:.25rem 1rem;align-items:baseline;padding:.85rem .2rem .85rem .8rem;border-bottom:1px solid var(--linea)}
 .day dt{font-family:var(--serif);font-weight:700;font-size:1.3rem;line-height:1.2}
 .day dd{color:var(--nogal-2);display:flex;flex-wrap:wrap;gap:.1rem 1.4rem;font-variant-numeric:tabular-nums}
@@ -261,7 +255,7 @@ p{color:var(--nogal-2);max-width:58ch}
 
 /* Hojas amarillas de fondo, muy suaves y desvaneciéndose hacia abajo, para que el fondo de la portada no quede liso */
 .hero,.visit{position:relative;isolation:isolate}
-.hero::before,.visit::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:url(fondo-pie.png) center top/260px 260px repeat;opacity:.11;
+.hero::before,.visit::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:url(fondo-pie.png) center top/260px 260px repeat;opacity:.2;
   -webkit-mask-image:linear-gradient(#000 0%,rgba(0,0,0,.55) 45%,transparent 100%);mask-image:linear-gradient(#000 0%,rgba(0,0,0,.55) 45%,transparent 100%)}
 /* ---------- Pie: el suelo de baldosa ---------- */
 .floor{position:relative;height:190px;background:var(--cal-2);overflow:hidden}
