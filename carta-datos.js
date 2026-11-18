@@ -6,7 +6,7 @@
    Publicar en la Web > pestaña de la carta > formato CSV).
    Mientras esté vacío, se usa la carta de ejemplo que hay en carta.html.
    ===================================================================== */
-var SHEET_CSV_URL='https://docs.google.com/spreadsheets/d/1j95VYi6wmIEYJ1HAUu96MOBv_wDKIOze5eoJGfa4j44/gviz/tq?tqx=out:csv__URL__sheet=Carta';
+var SHEET_CSV_URL='https://docs.google.com/spreadsheets/d/1j95VYi6wmIEYJ1HAUu96MOBv_wDKIOze5eoJGfa4j44/gviz/tq?tqx=out:csv&headers=1&sheet=Carta';
 
 (function(){
   var CACHE_KEY='tr-carta-v1';
