@@ -515,8 +515,20 @@ footer address{font-style:normal;color:var(--nogal-2);margin:.9rem 0 1.3rem}
   }
   var t=now();
 
+  /* Mantiene al día los horarios de los datos estructurados que lee Google (JSON-LD) */
+  function jsonLd(H){
+    var el=document.querySelector('script[type="application/ld+json"]'),o;if(!el)return;
+    try{o=JSON.parse(el.textContent)}catch(e){return}
+    var EN=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],sp=[];
+    order.forEach(function(i){H[i].s.forEach(function(r){
+      sp.push({'@type':'OpeningHoursSpecification',dayOfWeek:EN[i],opens:fmt(r[0]),closes:r[1]>=1440?'23:59':fmt(r[1])});
+    })});
+    o.openingHoursSpecification=sp;el.textContent=JSON.stringify(o);
+  }
+
   /* Pinta la lista del horario, el estado «abierto/cerrado» y los avisos */
   function pintar(H,avisos){
+    jsonLd(H);
     var t=now(),html='';
     order.forEach(function(i){
       var d=H[i],cls='day'+(i===t.d?' today':'')+(d.s.length?'':' closed');
